@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Draft Land Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Mulish:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{--paper:#fcfaf1;--ink:#17131c;--olive:#b3a26a;--brass:#b08a3e;--cond:"Barlow Condensed","DIN Condensed","Arial Narrow",sans-serif;--type:"Mulish","Avenir Next","Helvetica Neue",Arial,sans-serif;--small:13px;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--type);line-height:1.45}
+a{color:inherit}
+.top{position:sticky;top:0;z-index:6;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:calc(8px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));background:linear-gradient(#eceded,#d6d8d9 55%,#e3e5e5);border-bottom:1px solid #9a9d9e;box-shadow:inset 0 1px 0 #fff,0 2px 10px rgba(23,19,28,.14)}
+.knob{grid-column:1;justify-self:start;display:inline-grid;place-items:center;height:40px;padding:0 16px;background:var(--ink);color:var(--paper);font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border-radius:20px 20px 4px 4px;box-shadow:0 3px 0 var(--brass)}
+.top .home{grid-column:2;text-decoration:none}
+.lockup{display:inline-flex;align-items:center;gap:8px;line-height:1;text-align:left}
+.lockup svg{height:40px;width:auto;flex:none}
+.lockup small{display:block;font-family:var(--cond);font-weight:500;font-size:10px;letter-spacing:.2em;margin-bottom:3px}
+.lockup small u{font-size:.75em;text-underline-offset:2px}
+.lockup b{display:block;font-family:var(--cond);font-weight:600;font-size:21px;letter-spacing:.14em;white-space:nowrap}
+main{max-width:1120px;margin:0 auto;padding-block:clamp(28px,5vw,56px) 80px;padding-left:max(16px,env(safe-area-inset-left,0px),4vw);padding-right:max(16px,env(safe-area-inset-right,0px),4vw)}
+h1{margin:0 0 8px;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.1em;line-height:.95;font-size:clamp(44px,9vw,104px);text-wrap:balance}
+.lede{margin:0 0 clamp(20px,3vw,32px);max-width:60ch;font-size:16px;border-bottom:1px solid var(--olive);padding-bottom:16px}
+.events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:860px){.events{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.events{grid-template-columns:minmax(0,1fr)}}
+.ev{position:relative;aspect-ratio:4/5;padding:16px 16px 18px;display:flex;flex-direction:column;overflow:hidden;min-width:0;border-radius:2px}
+@media (max-width:480px){.ev{aspect-ratio:auto;min-height:260px}}
+.ev .kind{font-family:var(--cond);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;position:relative}
+.ev h3{margin:auto 0 10px;font-family:var(--cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:clamp(32px,4.6vw,56px);line-height:.95;position:relative;text-wrap:balance}
+.ev p{margin:0;font-size:var(--small);line-height:1.35;padding-right:34px;position:relative}
+.ev .dllogo{position:absolute;right:12px;bottom:12px;height:40px;width:auto}
+.ev.run{background:#8a8170 radial-gradient(circle at 30% 20%,rgba(255,255,255,.14),transparent 60%);color:#f8ebdb;--cut:#8a8170}
+.ev.paw{background:#8a9a3c;color:#fff;--cut:#8a9a3c}
+.ev.dj{background:#e9e6df;--cut:#e9e6df}
+.ev.dj::before{content:"";position:absolute;right:-12%;top:-10%;width:62%;aspect-ratio:1;border-radius:50%;background:#d5321f}
+.ev.after{background:#e8b93a linear-gradient(#fff6 0 12%,transparent 12%);--cut:#e8b93a}
+.ev.ways{background:#3f5a2a;color:#f3efe2;--cut:#3f5a2a}
+.ev.dlcp{background:#e3261f;color:#fff;--cut:#e3261f}
+.wallnote{font-size:var(--small);margin:14px 0 0;max-width:70ch}
+.fine{font-size:12px;opacity:.75;margin:28px 0 0;max-width:70ch}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="knob" href="index.html">← Menu</a>
+  <a class="home" href="index.html" aria-label="Back to the tap menu"><span class="lockup"><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg><span><small>COCKTAILS <u>ON</u> TAP</small><b>DRAFT LAND</b></span></span></a>
+</header>
+<main>
+  <h1>More than a bar</h1>
+  <p class="lede">Draft Land is also a run club, a dog day, a DJ booth and an art corner. Here is what has been on.</p>
+  <div class="events">
+      <article class="ev run"><span class="kind">Run club</span><h3>Draft<br>Run</h3><p>A 4K group run that finishes at the taps. Last seen 29 Jul 2026, 19:30, Draft Land Xinyi.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+      <article class="ev paw"><span class="kind">Dog day</span><h3>Pawcial<br>Club</h3><p>Drinks with your best friend. A dog-friendly Sunday, once a month. Seen 14 Sep 2025, Xinyi.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+      <article class="ev dj"><span class="kind">Music</span><h3>DJ<br>Nights</h3><p>Guest DJs play beside the tap wall. Seen: DJ Kenta, 27 Sep 2025.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+      <article class="ev after"><span class="kind">After work</span><h3>Afterwork</h3><p>An after-office session with Heineken: beer and tap cocktails side by side.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+      <article class="ev ways"><span class="kind">Drink series</span><h3>Ways of Seeing</h3><p>Cocktails named after books. No. 3, after John Berger: rum, gin, brandy, cream sherry, mango, orange, banana, mastic.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+      <article class="ev dlcp"><span class="kind">Art</span><h3>DLCP</h3><p>Draft Land Corner Project. Every bar keeps one corner for an invited artist, such as Kim Chen's 150 × 200 cm print.</p><svg class="dllogo" viewBox="0 0 40 96" aria-hidden="true"><path d="M14 8 a6 6 0 0 1 12 0 l-1.5 32 h-9z" fill="currentColor"/><circle cx="20" cy="56" r="16" fill="currentColor"/><rect x="15" y="70" width="10" height="21" rx="2" fill="currentColor"/><path d="M13 46 h14 v20 h-14z M13 52.500 h14 M13 59.500 h14 M17.700 46 v20 M22.300 46 v20" fill="none" stroke="var(--cut,#fcfaf1)" stroke-width="1.6"/></svg></article>
+    </div>
+    <p class="wallnote">Seen on Draft Land's Instagram and website. Most of these ran at the Taipei bars, so ask the Hong Kong team what's on this month.</p>
+  <p class="fine">This is an unofficial design concept, not affiliated with or endorsed by Draft Land. For real dates and bookings, see <a href="https://www.instagram.com/draftlandhk/" target="_blank" rel="noopener">@draftlandhk</a> or the <a href="https://www.draftland.tw/hk" target="_blank" rel="noopener">official site</a>.</p>
+</main>
+</body>
+</html>

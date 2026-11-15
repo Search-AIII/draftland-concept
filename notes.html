@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How the Draft Land menu was made</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Noto+Serif+HK:wght@900&display=swap">
+<style>
+:root{--paper:#fcfaf1;--ink:#17131c;--red:#8a6626;--wood:#281a39;--pour:#281a39;--green:#2f6b4a;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Courier Prime",ui-monospace,Menlo,monospace;font-size:15px;line-height:1.6}
+main{max-width:980px;margin:0 auto;padding-block:48px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:56px}
+a{color:var(--wood)}
+h1,h2{font-family:"Alfa Slab One",Rockwell,Georgia,serif;font-weight:400;color:var(--wood);margin:0;line-height:1;text-wrap:balance}
+h1{font-size:clamp(36px,6vw,60px);color:var(--red);transform:rotate(-1deg);transform-origin:0 50%}
+h2{font-size:clamp(26px,4vw,38px)}
+p{margin:0;max-width:66ch}
+section{display:grid;gap:16px}
+.step{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pour)}
+.feel{display:flex;flex-wrap:wrap;gap:10px}
+.feel span{font-weight:700;border:1.5px solid var(--ink);border-radius:99px;padding:4px 14px;transform:rotate(var(--r));background:rgba(255,250,240,.5)}
+.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.tile{border-radius:4px;padding:12px;min-height:120px;display:flex;flex-direction:column;justify-content:flex-end;font-size:12px;line-height:1.3;transform:rotate(var(--r,0deg));box-shadow:0 3px 8px rgba(63,42,31,.15);min-width:0}
+.tile b{font-size:13px}
+.zh{font-family:"Noto Serif HK","Songti TC",serif;font-weight:900}
+.xwrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1.5px dashed rgba(43,36,32,.3)}
+th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+td:first-child{font-weight:700;white-space:nowrap}
+.timeline{display:grid;gap:10px;border-left:3px solid var(--ink);padding-left:18px}
+.timeline p b{color:var(--red)}
+.quote{font-family:"Alfa Slab One",Georgia,serif;font-size:clamp(24px,3.6vw,34px);color:var(--red);transform:rotate(-1.5deg);transform-origin:0 50%}
+ul{margin:0;padding-left:20px;display:grid;gap:4px}
+@media (max-width:700px){.board{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<main>
+  <div style="display:grid;gap:12px">
+    <a href="index.html">← back to the menu</a>
+    <h1>How the Draft Land menu was made</h1>
+    <p>This follows the process from the Fasan video: form an opinion first, turn the feeling into a mood board and a painting "skill", then put it together and refine it until it feels cared for.</p>
+  </div>
+
+  <section>
+    <p class="step">Step 1 · The feeling</p>
+    <h2>Quick, unfussy, a bit cheeky, still hand-made</h2>
+    <div class="feel"><span style="--r:-3deg">quick</span><span style="--r:2deg">unfussy</span><span style="--r:-1deg">cheeky</span><span style="--r:3deg">hand-made</span><span style="--r:-2deg">Hong Kong</span></div>
+    <p>Fasan's feeling is warm, slightly rustic and honest. Draft Land shares the honesty: no garnish, no long story. It adds speed and a wink. From that feeling come the visual choices: a black stamped title on Draft Land's own ivory, with aubergine text and brass from their taps, watercolour glasses with nothing on the rim, a teal "pour" stamp, a red "taster" stamp, and the Cantonese slogan 唔使急，最緊要快 ("no rush, but be quick").</p>
+  </section>
+
+  <section>
+    <p class="step">Step 2 · Mood board</p>
+    <h2>What it should look like</h2>
+    <div class="board">
+      <div class="tile" style="background:#fcfaf1;--r:-1.5deg"><b>Draft Land ivory</b>#FCFAF1 · their site background</div>
+      <div class="tile" style="background:#17131c;color:#fcfaf1;--r:1deg"><b>Tap-handle black</b>#17131C · title, button</div>
+      <div class="tile" style="background:#281a39;color:#fcfaf1;--r:-1deg"><b>Aubergine ink</b>#281A39 · their text colour, headings</div>
+      <div class="tile" style="background:#b08a3e;color:#17131c;--r:2deg"><b>Tap brass</b>#B08A3E · prices, stamps, the tap</div>
+      <div class="tile" style="background:linear-gradient(#e6c072,#b8742a);--r:1.5deg"><b>Oolong amber</b>tea cocktails</div>
+      <div class="tile" style="background:linear-gradient(#a76236,#5e2c14);color:#f1e7d3;--r:-2deg"><b>Pu'er brown</b>Guk Bou</div>
+      <div class="tile" style="background:#2f6b4a;color:#fff;--r:1deg"><b class="zh">唔使急，最緊要快</b>minibus green, 0% stamp</div>
+      <div class="tile" style="background:#fbf7ee;border:1.5px dashed #2b2420;--r:-1deg"><b>No garnish.</b>Plain glass, ice, bubbles. Nothing else.</div>
+    </div>
+  </section>
+
+  <section>
+    <p class="step">Step 3 · The painting skill</p>
+    <h2>Watercolour glasses, painted by hand-style AI</h2>
+    <p>Like Fasan's coffee cups, the eight cocktails were painted with an image model as one watercolour sheet: loose washes, pigment blooms, white-paper highlights on the ice. Each glass was then cut out so it sits straight on the paper. Every drink is in a plain bar glass with no garnish, the way Draft Land serves them. The taster behind each drink is the same painting, served small.</p>
+  </section>
+
+  <section>
+    <p class="step">Step 3½ · The lab touch</p>
+    <h2>A little Le Labo</h2>
+    <p>Draft Land's rooms feel like a clean lab with a row of taps, close to Le Labo's perfume labs. So the menu borrows Le Labo's label: a white typewriter sticker that says where it was freshly poured, the date, and who it is for. Type your name on the label at the top and it is printed on the label of your surprise drink. Each drink also carries a tap number, like Le Labo's SANTAL 33.</p>
+  </section>
+
+  <section>
+    <p class="step">Step 4 · Assemble, keeping Fasan's structure</p>
+    <div class="xwrap">
+      <table>
+        <thead><tr><th>Fasan</th><th>Draft Land</th></tr></thead>
+        <tbody>
+          <tr><td>FASAN's menu</td><td>DRAFT LAND's taps, stamped in red</td></tr>
+          <tr><td>Signature Drink / Afternoon Creations / Espresso</td><td>Signature Taps / Causeway Bay Only / Across the Harbour</td></tr>
+          <tr><td>Bean notes under Espresso</td><td>Day shift (nodi coffee) and night shift (cocktails) at TST</td></tr>
+          <tr><td>ICED / HOT stamp</td><td>POUR / TASTER / 0% ABV stamp</td></tr>
+          <tr><td>⇄ hot, cup tucks behind</td><td>⇄ taster, because the taps let you sample before you commit</td></tr>
+          <tr><td>Surprise me: a cup spins and changes each half-turn</td><td>The same, with glasses</td></tr>
+          <tr><td>Add-ons line</td><td>Street snacks line</td></tr>
+          <tr><td>(new)</td><td>What's in it: every drink opens a formula sheet with each ingredient painted. A tick marks what press coverage confirms. The real Taipei tap wall does this with numbered white cards listing ingredients above each black tap handle.</td></tr>
+          <tr><td>(new)</td><td>The Draftender Test: pick a Draftender and a drink, hold to pour, fill a six-stamp card</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <p class="step">The story behind it</p>
+    <h2>Why cocktails on tap?</h2>
+    <p>Angus Zou (Taipei, ex-Alchemy) and Antonio Lai (Hong Kong, Quinary) had long talked about opening a bar together to mark their friendship. Their view was that cocktails had become too pricey, too scarce and too intimidating. If you batch, keg and pour them like draught beer, they become fast, consistent and cheaper, with less waste, and guests can taste before ordering. The brand's four values are speed, quality, affordability and sustainability.</p>
+    <p class="quote">“No garnish, no bullsh*t.”</p>
+    <div class="timeline">
+      <p><b>2018</b> Taipei, Zhongxiao E. Rd. Asia's first cocktails-on-tap bar.</p>
+      <p><b>2018–19</b> <span class="zh">中環</span> 63 Wyndham St, Central. The first bar outside Taiwan.</p>
+      <p><b>2023</b> Singapore, with Nutmeg &amp; Clove.</p>
+      <p><b>2024</b> <span class="zh">銅鑼灣</span> Tang Lung St. Yuwasabi, Watercress Honey and a six-stop food-map stamp card that wins a tote bag.</p>
+      <p><b>2026</b> <span class="zh">尖沙咀</span> Minden Ave. Coffee by nodi in the day, cocktails at night.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="step">Sources</p>
+    <ul>
+      <li><a href="https://www.draftland.tw/hk" target="_blank" rel="noopener">Draft Land HK official page</a></li>
+      <li><a href="https://hivelife.com/draft-land/" target="_blank" rel="noopener">Hive Life, 2019</a></li>
+      <li><a href="https://www.afoodieworld.com/blog/2024/02/20/draft-land-causeway-bay/" target="_blank" rel="noopener">Foodie: Causeway Bay, 2024</a></li>
+      <li><a href="https://www.timeout.com/hong-kong/news/popular-cocktail-bar-draft-land-expands-across-the-harbour-to-tsim-sha-tsui-080726" target="_blank" rel="noopener">Time Out HK: Tsim Sha Tsui</a></li>
+      <li><a href="https://www.scmp.com/lifestyle/100-top-tables/article/3331775/drink-focus-guk-bou-draft-land" target="_blank" rel="noopener">SCMP: Guk Bou</a></li>
+      <li><a href="https://www.thedrinksbusiness.com/2019/01/hong-kong-opens-first-cocktails-on-tap-bar/" target="_blank" rel="noopener">The Drinks Business, 2019</a></li>
+      <li><a href="https://fasan-menu.vercel.app/" target="_blank" rel="noopener">Fasan's menu (design reference)</a></li>
+    </ul>
+    <p style="opacity:.7;font-size:13px">Prices are from press coverage and may have changed. Señorita Picante's ingredients weren't published, so its card says "ask the Draftender".</p>
+  </section>
+</main>
+</body>
+</html>
